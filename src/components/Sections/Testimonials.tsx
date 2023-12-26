@@ -13,7 +13,6 @@ const Testimonials: FC = memo(() => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const [scrollValue, setScrollValue] = useState(0);
   const [parallaxEnabled, setParallaxEnabled] = useState(false);
-
   const itemWidth = useRef(0);
   const scrollContainer = useRef<HTMLDivElement>(null);
 

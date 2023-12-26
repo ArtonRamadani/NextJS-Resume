@@ -1,4 +1,7 @@
+import 'react-toastify/dist/ReactToastify.css';
+
 import {FC, memo, useCallback, useMemo, useState} from 'react';
+import {toast, ToastContainer} from 'react-toastify';
 
 interface FormData {
   name: string;
@@ -21,9 +24,7 @@ const ContactForm: FC = memo(() => {
   const onChange = useCallback(
     <T extends HTMLInputElement | HTMLTextAreaElement>(event: React.ChangeEvent<T>): void => {
       const {name, value} = event.target;
-
       const fieldData: Partial<FormData> = {[name]: value};
-
       setData({...data, ...fieldData});
     },
     [data],
@@ -32,12 +33,33 @@ const ContactForm: FC = memo(() => {
   const handleSendMessage = useCallback(
     async (event: React.FormEvent<HTMLFormElement>) => {
       event.preventDefault();
-      /**
-       * This is a good starting point to wire up your form submission logic
-       * */
-      console.log('Data to send: ', data);
+
+      const formSpreeEndpoint = 'https://formspree.io/f/mzbnplpp';
+
+      try {
+        const response = await fetch(formSpreeEndpoint, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        });
+
+        if (response.ok) {
+          const responseData = await response.json();
+          console.log('Message sent successfully:', responseData);
+          toast.success('Your message has been received, I will contact you ASAP!');
+          setData(defaultData);
+        } else {
+          console.error('Error sending message:', response.statusText);
+          toast.error('Error sending message. Please try again.');
+        }
+      } catch (error) {
+        console.error('Error sending message:', error);
+        toast.error('An unexpected error occurred. Please try again later.');
+      }
     },
-    [data],
+    [data, defaultData], // Include defaultData in the dependency array
   );
 
   const inputClasses =
@@ -45,7 +67,16 @@ const ContactForm: FC = memo(() => {
 
   return (
     <form className="grid min-h-[320px] grid-cols-1 gap-y-4" method="POST" onSubmit={handleSendMessage}>
-      <input className={inputClasses} name="name" onChange={onChange} placeholder="Name" required type="text" />
+      <ToastContainer />
+      <input
+        className={inputClasses}
+        name="name"
+        onChange={onChange}
+        placeholder="Name"
+        required
+        type="text"
+        value={data.name}
+      />
       <input
         autoComplete="email"
         className={inputClasses}
@@ -54,6 +85,7 @@ const ContactForm: FC = memo(() => {
         placeholder="Email"
         required
         type="email"
+        value={data.email}
       />
       <textarea
         className={inputClasses}
@@ -63,6 +95,7 @@ const ContactForm: FC = memo(() => {
         placeholder="Message"
         required
         rows={6}
+        value={data.message}
       />
       <button
         aria-label="Submit contact form"

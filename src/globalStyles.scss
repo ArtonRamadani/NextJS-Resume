@@ -36,7 +36,14 @@ body {
   position: relative;
   width: 100%;
   color: #444444;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Ubuntu,
+    "Helvetica Neue",
+    sans-serif;
   background-color: #fafafa;
 }
 
@@ -48,4 +55,77 @@ th {
 
 th {
   font-weight: 600;
+}
+.blur {
+  backdrop-filter: blur(5px); /* blur effect to the backdrop */
+  background-color: rgba(255, 255, 255, 0.2);
+  font-size: 30px;
+}
+
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: transparent;
+}
+
+::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: #000000;
+}
+
+
+
+.alert>.start-icon {
+  margin-right: 0;
+  min-width: 20px;
+  text-align: center;
+}
+
+.alert>.start-icon {
+  margin-right: 5px;
+}
+
+.greencross
+{
+font-size:18px;
+    color: #25ff0b;
+  text-shadow: none;
+}
+
+.alert-simple.alert-success
+{
+border: 1px solid rgba(36, 241, 6, 0.46);
+  background-color: rgba(7, 149, 66, 0.12156862745098039);
+  box-shadow: 0px 0px 2px #259c08;
+  color: #0ad406;
+text-shadow: 2px 1px #00040a;
+transition:0.5s;
+cursor:pointer;
+}
+.alert-success:hover{
+background-color: rgba(7, 149, 66, 0.35);
+transition:0.5s;
+}
+.alert-simple.alert-info
+{
+border: 1px solid rgba(6, 44, 241, 0.46);
+  background-color: rgba(7, 73, 149, 0.12156862745098039);
+  box-shadow: 0px 0px 2px #0396ff;
+  color: #0396ff;
+text-shadow: 2px 1px #00040a;
+transition:0.5s;
+cursor:pointer;
+}
+
+.alert-info:hover
+{
+background-color: rgba(7, 73, 149, 0.35);
+transition:0.5s;
 }

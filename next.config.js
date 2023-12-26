@@ -24,7 +24,17 @@ const nextConfig = {
   swcMinify: true,
   trailingSlash: false,
   images: {
-    domains: ['images.unsplash.com', 'source.unsplash.com'],
+    domains: [
+      'images.unsplash.com',
+      'source.unsplash.com',
+      'e0.pxfuel.com',
+      'lh3.googleusercontent.com',
+      'assets-global.website-files.com',
+      'yuuniq.com',
+      'www.raportodiskriminimin.org',
+      'ihmk-rks.net',
+      "admin.m-technologie.com"
+    ],
   },
 };
 
