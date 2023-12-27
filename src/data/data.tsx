@@ -109,9 +109,7 @@ const age = currentDate?.getFullYear() - birthDate?.getFullYear();
 
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
-  to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
-  in.`,
+  description: `Dedicated Full Stack Software Engineer from Kosova. Currently mastering TypeScript, I bring expertise in React.js, Node.js, and proficiency in working with databases like MySQL and MongoDB. My journey into the world of web development began with a passion for crafting seamless user experiences. Through constant learning and innovation, I ensure robust and efficient solutions. As a versatile problem solver, I thrive in dynamic environments, delivering clean code and pushing the boundaries of what's possible. Explore my portfolio to see the fusion of creativity and technology.`,
   aboutItems: [
     {label: 'Location', text: 'Kosova, XK', Icon: MapIcon},
     {label: 'Age', text: `${age}`, Icon: CalendarIcon},
