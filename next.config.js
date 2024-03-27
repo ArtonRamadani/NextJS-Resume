@@ -33,7 +33,8 @@ const nextConfig = {
       'yuuniq.com',
       'www.raportodiskriminimin.org',
       'ihmk-rks.net',
-      "admin.m-technologie.com"
+      "admin.m-technologie.com",
+      "www.developmentaid.org"
     ],
   },
 };

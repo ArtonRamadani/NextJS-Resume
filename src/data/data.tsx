@@ -227,8 +227,20 @@ export const freelancePortfolioItems: PortfolioItem[] = [
 export const portfolioItems: PortfolioItem[] = [
   {
     title: 'Project of Harrisia',
-    description: '',
+    description: `A platform for court review system ment to be used by the public.
+    Technology used: React.js, Node.js, MYSQL, Bootstrap5, HTML5, CSS3, Flutter (for mobile app development).`,
     url: '',
+    background: "red",
+    blur: false,
+    image:
+      'https://www.developmentaid.org/files/organizationLogos/chemonics-international-kenya-203060.jpg',
+  },
+  {
+    title: 'Project of Harrisia',
+    description: `A reward-based game app organizes challenges and various activities for players, offering different rewards.
+    The objective is to engage and motivate users to buy Coca-Cola as a product and at the same time give back to them a gift if they ar lucky to be chosen as winners.
+    Technology used: React.js, Node.js, MYSQL, MYSQL Events, Bootstrap5, HTML5, CSS3`,
+    url: 'https://cokenewyear.com/',
     background: "red",
     blur: false,
     image:
@@ -237,86 +249,48 @@ export const portfolioItems: PortfolioItem[] = [
   {
     title: 'Project of Harrisia',
     description: '',
-    url: '',
-    background: "red",
+    url: 'https://yuuniq.com',
+    background: "transparent",
     blur: false,
     image: 'https://yuuniq.com/assets/Layer_1.png',
   },
   {
     title: 'Project of Harrisia',
-    description: '',
-    url: '',
-    background: "red",
+    description: `National platform for protection against discrimination for Rom, Ashkali and Egyptian communities.
+    Technology used: React.js, Node.js, MYSQL, jQuery, Bootstrap5, HTML5, CSS3.`,
+    url: 'https://www.raportodiskriminimin.org/',
+    background: "white",
     blur: false,
     image: 'https://www.raportodiskriminimin.org/static/media/Logoshqip.f4d0133c.png',
   },
+
   {
     title: 'Project of Harrisia',
-    description: '',
+    description: `Platform for monitoring and calculation of Hydrometeorological activities
+    Technology used: NET 6, React.js, Entity Framework Core, LINQ, MSSQL, Report Viewer, jQuery, Bootstrap5, HTML5, CSS3.`,
     url: '',
-    background: "red",
+    background: "transparent",
+    blur: false,
+    image: 'https://ihmk-rks.net/inc/images/IHMK.png',
+  },
+  {
+    title: 'Project of Harrisia',
+    description: `A revolutionary fitness app offering personalized workouts with diverse trainers tailored to individual goals  and preferences.
+    Technology used: React.js, Node.js, MYSQL, Bootstrap5, HTML5, CSS3, Flutter (for mobile app development).`,
+    url: '',
+    background: "transparent",
     blur: false,
     image: porfolioImage5,
   },
   {
     title: 'Project of Harrisia',
     description: '',
-    url: '',
-    background: "red",
-    blur: false,
-    image: 'https://ihmk-rks.net/inc/images/IHMK.png',
-  },
-  {
-    title: 'Project of Harrisia',
-    description: '',
-    url: '',
-    background: "red",
+    url: 'https://termini.beauty',
+    background: "white",
     blur: false,
     image: porfolioImage6,
   },
-  // {
-  //   title: 'termini.beauty - Harrisia',
-  //   description: 'Give a short description of your project here.',
-  //   url: '',
-  //   blur: false,
-  //   image: porfolioImage4,
-  // },
-  // {
-  //   title: 'Project title 6',
-  //   description: 'Give a short description of your project here.',
-  //   url: 'https://reactresume.com',
-  //   image: porfolioImage6,
-  // },
-  // {
-  //   title: 'Project title 7',
-  //   description: 'Give a short description of your project here.',
-  //   url: 'https://reactresume.com',
-  //   image: porfolioImage7,
-  // },
-  // {
-  //   title: 'Project title 8',
-  //   description: 'Give a short description of your project here.',
-  //   url: 'https://reactresume.com',
-  //   image: porfolioImage8,
-  // },
-  // {
-  //   title: 'Project title 9',
-  //   description: 'Give a short description of your project here.',
-  //   url: 'https://reactresume.com',
-  //   image: porfolioImage9,
-  // },
-  // {
-  //   title: 'Project title 10',
-  //   description: 'Give a short description of your project here.',
-  //   url: 'https://reactresume.com',
-  //   image: porfolioImage10,
-  // },
-  // {
-  //   title: 'Project title 11',
-  //   description: 'Give a short description of your project here.',
-  //   url: 'https://reactresume.com',
-  //   image: porfolioImage11,
-  // },
+ 
 ];
 
 /**
