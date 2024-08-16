@@ -23,9 +23,10 @@ import eSim from '../images/portfolio/esim.jpg';
 import porfolioImage4 from '../images/portfolio/furnishHomeKS.jpg';
 import porfolioImage1 from '../images/portfolio/m-technologie.png';
 // import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
-import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
+import porfolioImage3 from '../images/portfolio/portfolio-3.png';
 import porfolioImage5 from '../images/portfolio/shqip-fit.svg';
 import porfolioImage6 from '../images/portfolio/termini_beauty-logo.webp';
+import porfolioImage7 from '../images/portfolio/yuuniq.png';
 import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
 import {
@@ -201,16 +202,17 @@ export const freelancePortfolioItems: PortfolioItem[] = [
       "I'm delighted to present my latest project, a dynamic web application crafted with React.js and Node.js, backed by a robust MySQL database. This multifaceted system boasts an intuitive admin panel for seamless content management and a client module for an engaging user experience. Leveraging the power of React, the frontend delivers a responsive and modern interface, while Node.js handles the backend operations efficiently. The integration with MySQL ensures data integrity and scalability. This project not only showcases my technical proficiency in full-stack development but also emphasizes my commitment to creating user-centric solutions. Explore the admin controls and client features to witness the seamless synergy of technology in action.",
     url: 'https://www.m-technologie.com/',
     blur: false,
-    background: "transparent",
+    background: 'transparent',
     image: porfolioImage1,
   },
+
   {
     title: 'E-Sim Reseller Website',
     description:
       "In my latest venture, I've developed an innovative eSIM reseller platform using React.js, Node.js, and MySQL. This dynamic system leverages the power of APIs to seamlessly integrate with external services, enabling the retrieval of real-time data for eSIMs. The utilization of React ensures a modern and responsive user interface, while the backend, powered by Node.js, efficiently manages the integration with various APIs, creating a streamlined experience for both resellers and end-users. The MySQL database plays a pivotal role in storing and managing eSIM-related information, ensuring data security and reliability. This project not only demonstrates my technical prowess in React and Node.js but also underscores my ability to create solutions that bridge the digital gap in the rapidly evolving telecommunications landscape.",
-    url: '',
+    url: 'https://tripon-esim.com/',
     blur: false,
-    background: "transparent",
+    background: 'transparent',
     image: porfolioImage3,
   },
   {
@@ -219,7 +221,7 @@ export const freelancePortfolioItems: PortfolioItem[] = [
       "Revolutionizing the sales approach for a local furniture company, I developed a dynamic digital solution using WordPress. This transformative platform not only showcases the exquisite craftsmanship of the furniture but also enhances the entire sales process. Through strategic customization and integration, the website seamlessly blends aesthetic appeal with functional efficiency. Customers can now explore the diverse furniture collection, accompanied by detailed descriptions and high-quality visuals. The WordPress architecture ensures easy content management, empowering the client to update product listings and engage with the audience effortlessly. By digitizing the sales experience, this project not only elevates the company's online presence but also brings the artistry of furniture craftsmanship to a broader digital audience.",
     url: '',
     blur: false,
-    background: "transparent",
+    background: 'transparent',
     image: porfolioImage4,
   },
 ];
@@ -230,10 +232,9 @@ export const portfolioItems: PortfolioItem[] = [
     description: `A platform for court review system ment to be used by the public.
     Technology used: React.js, Node.js, MYSQL, Bootstrap5, HTML5, CSS3, Flutter (for mobile app development).`,
     url: '',
-    background: "red",
+    background: 'red',
     blur: false,
-    image:
-      'https://www.developmentaid.org/files/organizationLogos/chemonics-international-kenya-203060.jpg',
+    image: 'https://www.developmentaid.org/files/organizationLogos/chemonics-international-kenya-203060.jpg',
   },
   {
     title: 'Project of Harrisia',
@@ -241,7 +242,7 @@ export const portfolioItems: PortfolioItem[] = [
     The objective is to engage and motivate users to buy Coca-Cola as a product and at the same time give back to them a gift if they ar lucky to be chosen as winners.
     Technology used: React.js, Node.js, MYSQL, MYSQL Events, Bootstrap5, HTML5, CSS3`,
     url: 'https://cokenewyear.com/',
-    background: "red",
+    background: 'red',
     blur: false,
     image:
       'https://assets-global.website-files.com/63f6e52346a353ca1752970e/6440bf1a03c90188594c39e7_study-cover-cocacola.jpeg',
@@ -250,16 +251,16 @@ export const portfolioItems: PortfolioItem[] = [
     title: 'Project of Harrisia',
     description: '',
     url: 'https://yuuniq.com',
-    background: "transparent",
+    background: 'transparent',
     blur: false,
-    image: 'https://yuuniq.com/assets/Layer_1.png',
+    image: porfolioImage7,
   },
   {
     title: 'Project of Harrisia',
     description: `National platform for protection against discrimination for Rom, Ashkali and Egyptian communities.
     Technology used: React.js, Node.js, MYSQL, jQuery, Bootstrap5, HTML5, CSS3.`,
     url: 'https://www.raportodiskriminimin.org/',
-    background: "white",
+    background: 'white',
     blur: false,
     image: 'https://www.raportodiskriminimin.org/static/media/Logoshqip.f4d0133c.png',
   },
@@ -269,7 +270,7 @@ export const portfolioItems: PortfolioItem[] = [
     description: `Platform for monitoring and calculation of Hydrometeorological activities
     Technology used: NET 6, React.js, Entity Framework Core, LINQ, MSSQL, Report Viewer, jQuery, Bootstrap5, HTML5, CSS3.`,
     url: '',
-    background: "transparent",
+    background: 'transparent',
     blur: false,
     image: 'https://ihmk-rks.net/inc/images/IHMK.png',
   },
@@ -278,7 +279,7 @@ export const portfolioItems: PortfolioItem[] = [
     description: `A revolutionary fitness app offering personalized workouts with diverse trainers tailored to individual goals  and preferences.
     Technology used: React.js, Node.js, MYSQL, Bootstrap5, HTML5, CSS3, Flutter (for mobile app development).`,
     url: '',
-    background: "transparent",
+    background: 'transparent',
     blur: false,
     image: porfolioImage5,
   },
@@ -286,11 +287,10 @@ export const portfolioItems: PortfolioItem[] = [
     title: 'Project of Harrisia',
     description: '',
     url: 'https://termini.beauty',
-    background: "white",
+    background: 'white',
     blur: false,
     image: porfolioImage6,
   },
- 
 ];
 
 /**

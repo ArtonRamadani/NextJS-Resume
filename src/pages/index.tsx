@@ -30,6 +30,4 @@ const Home: FC = memo(() => {
   );
 });
 
-
-
 export default Home;
