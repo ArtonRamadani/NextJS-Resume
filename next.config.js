@@ -34,7 +34,8 @@ const nextConfig = {
       'www.raportodiskriminimin.org',
       'ihmk-rks.net',
       "admin.m-technologie.com",
-      "www.developmentaid.org"
+      "www.developmentaid.org",
+      "sims.cacttus.education"
     ],
   },
 };

@@ -91,7 +91,7 @@ const ItemOverlay: FC<{item: PortfolioItem}> = memo(({item: {url, title, descrip
     },
     [mobile, showOverlay],
   );
-  console.log('url', url);
+
   return (
     <>
       {url !== '' ? (
