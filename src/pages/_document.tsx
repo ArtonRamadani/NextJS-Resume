@@ -1,4 +1,3 @@
-import {Analytics} from '@vercel/analytics/react';
 import {Head, Html, Main, NextScript} from 'next/document';
 
 import portfolioData from '../data/portfolioData.json';
@@ -42,7 +41,6 @@ export default function Document() {
         {m.ogUrl && <link href={m.ogUrl} rel="canonical" />}
       </Head>
       <body className="bg-black">
-        <Analytics />
         <Main />
         <NextScript />
       </body>
