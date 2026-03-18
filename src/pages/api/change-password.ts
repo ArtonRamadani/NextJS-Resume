@@ -1,16 +1,16 @@
 import crypto from 'crypto';
 import type {NextApiRequest, NextApiResponse} from 'next';
 
-import {readJSON, writeJSON} from '../../lib/dataStore';
+import {readJSONAsync, writeJSONAsync} from '../../lib/dataStore';
 import {validateToken} from './auth';
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({error: 'Method not allowed'});
   }
 
   const token = req.headers.authorization?.replace('Bearer ', '');
-  if (!validateToken(token)) {
+  if (!(await validateToken(token))) {
     return res.status(401).json({error: 'Unauthorized'});
   }
 
@@ -23,7 +23,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       return res.status(400).json({error: 'New password must be at least 6 characters'});
     }
 
-    const credentials = readJSON('adminCredentials.json');
+    const credentials = (await readJSONAsync('adminCredentials.json')) as {username: string; passwordHash: string};
     const currentHash = crypto.createHash('sha256').update(currentPassword).digest('hex');
 
     if (currentHash !== credentials.passwordHash) {
@@ -31,11 +31,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
 
     credentials.passwordHash = crypto.createHash('sha256').update(newPassword).digest('hex');
-    writeJSON('adminCredentials.json', credentials);
+    await writeJSONAsync('adminCredentials.json', credentials);
 
     return res.status(200).json({success: true});
   } catch (err) {
-    console.error('Change password API error:', err);
-    return res.status(500).json({error: 'Internal server error'});
+    const message = err instanceof Error ? err.message : String(err);
+    console.error('Change password API error:', message);
+    return res.status(500).json({error: 'Internal server error', detail: message});
   }
 }

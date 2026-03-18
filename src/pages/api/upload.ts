@@ -13,13 +13,13 @@ export const config = {
   },
 };
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({error: 'Method not allowed'});
   }
 
   const token = req.headers.authorization?.replace('Bearer ', '');
-  if (!validateToken(token)) {
+  if (!(await validateToken(token))) {
     return res.status(401).json({error: 'Unauthorized'});
   }
 
@@ -40,7 +40,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     return res.status(200).json({url: `/uploads/${finalName}`});
   } catch (err) {
-    console.error('Upload API error:', err);
-    return res.status(500).json({error: 'Internal server error'});
+    const message = err instanceof Error ? err.message : String(err);
+    console.error('Upload API error:', message);
+    return res.status(500).json({error: 'Internal server error', detail: message});
   }
 }
