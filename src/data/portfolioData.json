@@ -1,0 +1,366 @@
+{
+  "meta": {
+    "title": "Arton Ramadani — Software Engineer | Full-Stack Developer",
+    "description": "Arton Ramadani — Software Engineer from Kosovo specializing in full-stack web development with React.js, Node.js, TypeScript, and SQL. Building scalable enterprise platforms, mobile apps, and modern web solutions.",
+    "keywords": "Arton Ramadani, Software Engineer, Full Stack Developer, React.js, Node.js, TypeScript, Kosovo, Web Development, Portfolio, Freelance Developer, MERN Stack, Mobile Development, React Native",
+    "author": "Arton Ramadani",
+    "ogTitle": "Arton Ramadani — Software Engineer | Full-Stack Developer",
+    "ogDescription": "Full-stack software engineer from Kosovo building scalable web and mobile applications with React.js, Node.js, and TypeScript. Explore projects, experience, and skills.",
+    "ogImage": "https://artonramadani.info/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fprofilepic.6178d642.jpg&w=640&q=75",
+    "ogUrl": "https://artonramadani.info/",
+    "twitterCard": "summary_large_image",
+    "aiDescription": "Arton Ramadani is a software engineer based in Prishtina, Kosovo. He specializes in full-stack development using React.js, Node.js, TypeScript, MySQL, MSSQL, and MongoDB. He has professional experience at Genpact and Harrisia, where he led development teams, managed DevOps pipelines, and delivered enterprise-grade platforms. He also lectures MERN Stack at ROI Academy and has freelanced since 2017 building web apps for clients across e-commerce, outsourcing, fitness, and government sectors. His technical skills span frontend (React, Angular), backend (Node.js, PHP, SQL, Snowflake, Databricks), mobile (React Native), and low-code (WordPress, Power Apps). He holds a B.Sc. in Computer Science from the University for Business and Technology and is certified in Cybersecurity from AUK/CISCO."
+  },
+  "hero": {
+    "name": "I'm Arton Ramadani.",
+    "nameColor": "#ffffff",
+    "descriptionHtml": "<p class=\"prose-sm text-stone-200 sm:prose-base lg:prose-lg text-light\">A <strong class=\"text-stone-100\">Software Engineer</strong>, currently&nbsp; helping build modern, mobile-first, web app's.</p>\n<p class=\"prose-sm text-stone-200 sm:prose-base lg:prose-lg\">In my free time time, you can catch me either training at the <strong class=\"text-stone-100\">Gym</strong>, <strong class=\"text-stone-100\">Coding</strong> or <strong class=\"text-stone-100\">Reading a book</strong>.</p>",
+    "buttonText": "Contact",
+    "buttonLink": "#contact"
+  },
+  "about": {
+    "profileImage": "/uploads/1773798919030_profilepic.webp",
+    "description": "I'm a dedicated software engineer with a strong affinity for back-end technologies such as Node.js, MySQL, MSSQL and MongoDB. Equally passionate about front-end development, I take pride in crafting compelling user interfaces and seamless user experiences with many of my work being showcased on my website. Beyond development, I lead teams, manage projects, and oversee DevOps, security, and GitLab server management I am also deeply engaged in Linux, networking, and different types of emerging technologies, fostering a holistic approach to software engineering and leading as a team. With a commitment to continuous improvement, I strive to bridge the gap between back-end and front-end development, delivering technically efficient communication to other departments, ensuring of logical, structured, scalable, user-centric and effective solutions.",
+    "aboutItems": [
+      {
+        "label": "Location",
+        "text": "Kosova, XK",
+        "icon": "MapIcon"
+      },
+      {
+        "label": "Nationality",
+        "text": "Albanian",
+        "icon": "FlagIcon"
+      },
+      {
+        "label": "Interests",
+        "text": "Fitness, Nature, Culture",
+        "icon": "SparklesIcon"
+      },
+      {
+        "label": "Study",
+        "text": "University for Business and Technology",
+        "icon": "AcademicCapIcon"
+      },
+      {
+        "label": "Employment",
+        "text": "Genpact",
+        "icon": "BuildingOffice2Icon"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Spoken languages",
+      "skills": [
+        {
+          "name": "Albanian",
+          "level": 10
+        },
+        {
+          "name": "English",
+          "level": 9
+        }
+      ]
+    },
+    {
+      "name": "Frontend development",
+      "skills": [
+        {
+          "name": "Javascript",
+          "level": 10
+        },
+        {
+          "name": "Typescript",
+          "level": 9
+        },
+        {
+          "name": "React.JS",
+          "level": 10
+        },
+        {
+          "name": "Angular",
+          "level": 7
+        }
+      ]
+    },
+    {
+      "name": "Backend development",
+      "skills": [
+        {
+          "name": "Node.js",
+          "level": 10
+        },
+        {
+          "name": "PHP",
+          "level": 6
+        },
+        {
+          "name": "Java",
+          "level": 3
+        },
+        {
+          "name": "SQL",
+          "level": 9
+        },
+        {
+          "name": "SnowFlake",
+          "level": 5
+        },
+        {
+          "name": "Databricks",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "name": "Low code platforms",
+      "skills": [
+        {
+          "name": "Wordpress",
+          "level": 8
+        },
+        {
+          "name": "Power Apps",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "name": "Mobile development",
+      "skills": [
+        {
+          "name": "React Native",
+          "level": 7
+        }
+      ]
+    }
+  ],
+  "freelancePortfolio": [
+    {
+      "title": "m-technologie",
+      "description": "I'm delighted to present a dynamic web application crafted with React.js and Node.js, backed by a robust MySQL database. This multifaceted system boasts an intuitive admin panel for seamless content management and a client module for an engaging user experience.",
+      "url": "https://www.m-technologie.com/",
+      "blur": false,
+      "background": "transparent",
+      "image": "/images/portfolio/m-technologie.png"
+    },
+    {
+      "title": "E-Sim Reseller Website",
+      "description": "In my latest venture, I've developed an innovative eSIM reseller platform using React.js, Node.js, and MySQL.",
+      "url": "https://tripon-esim.com/",
+      "blur": false,
+      "background": "transparent",
+      "image": "/images/portfolio/portfolio-3.png"
+    },
+    {
+      "title": "HiveOutsourcing",
+      "description": "Hive Outsourcing is at the forefront of transforming business landscapes through innovative outsourcing solutions.",
+      "url": "https://hiveoutsource.com/",
+      "blur": false,
+      "background": "transparent",
+      "image": "/images/portfolio/hiveLogo.png"
+    },
+    {
+      "title": "FurnishHome-KS",
+      "description": "Revolutionizing the sales approach for a local furniture company, I developed a dynamic digital solution using WordPress.",
+      "url": "",
+      "blur": false,
+      "background": "transparent",
+      "image": "/images/portfolio/furnishHomeKS.jpg"
+    }
+  ],
+  "portfolio": [
+    {
+      "title": "Project of Harrisia",
+      "description": "A reward-based game app organizes challenges and various activities for players, offering different rewards. Technology used: React.js, Node.js, MYSQL, Bootstrap5, HTML5, CSS3",
+      "url": "https://cokenewyear.com/",
+      "background": "red",
+      "blur": false,
+      "image": "https://assets-global.website-files.com/63f6e52346a353ca1752970e/6440bf1a03c90188594c39e7_study-cover-cocacola.jpeg"
+    },
+    {
+      "title": "Project of Harrisia",
+      "description": "A platform for court review system meant to be used by the public. Technology used: React.js, Node.js, MYSQL, Bootstrap5, HTML5, CSS3, Flutter.",
+      "url": "",
+      "background": "transparent",
+      "blur": false,
+      "image": "https://www.developmentaid.org/files/organizationLogos/chemonics-international-kenya-203060.jpg"
+    },
+    {
+      "title": "Project of Harrisia",
+      "description": "",
+      "url": "https://yuuniq.com",
+      "background": "transparent",
+      "blur": false,
+      "image": "/images/portfolio/yuuniq.png"
+    },
+    {
+      "title": "Project of Harrisia",
+      "description": "A platform Student Information Management System, a RBAC platform. Technology used: React.js, Node.js, MYSQL, Bootstrap5, HTML5, CSS3",
+      "url": "",
+      "background": "transparent",
+      "blur": false,
+      "image": "/images/portfolio/sims-BxGDfmQm.png"
+    },
+    {
+      "title": "Project of Harrisia",
+      "description": "National platform for protection against discrimination. Technology used: React.js, Node.js, MYSQL, jQuery, Bootstrap5, HTML5, CSS3.",
+      "url": "https://www.raportodiskriminimin.org/",
+      "background": "white",
+      "blur": false,
+      "image": "/images/portfolio/antig.f4d0133c1e8e06004808.png"
+    },
+    {
+      "title": "Project of Harrisia",
+      "description": "Platform for monitoring and calculation of Hydrometeorological activities. Technology used: NET 6, React.js, Entity Framework Core, LINQ, MSSQL.",
+      "url": "",
+      "background": "transparent",
+      "blur": false,
+      "image": "/images/portfolio/IHMK.png"
+    },
+    {
+      "title": "Project of Harrisia",
+      "description": "A revolutionary fitness app offering personalized workouts. Technology used: React.js, Node.js, MYSQL, Bootstrap5, Flutter.",
+      "url": "",
+      "background": "transparent",
+      "blur": false,
+      "image": "/images/portfolio/shqip-fit.svg"
+    },
+    {
+      "title": "Project of Harrisia",
+      "description": "",
+      "url": "https://termini.beauty",
+      "background": "white",
+      "blur": false,
+      "image": "/images/portfolio/termini_beauty-logo.webp"
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "m-technologie",
+      "text": "Working with you has been a breath of fresh air – cool, easy, and incredibly rewarding.",
+      "image": "https://admin.m-technologie.com/static/media/Screenshot%202023-09-11.5184fe21459bb43b8063.png"
+    },
+    {
+      "name": "e-sim",
+      "text": "Not only did you meet all of my expectations, but you also exceeded them with your innovative solutions and timely delivery.",
+      "image": "/images/portfolio/portfolio-3.png"
+    },
+    {
+      "name": "Hive Outsource",
+      "text": "The platform is seamless, intuitive, and built with precision. Your commitment to quality, innovation, and smooth collaboration has made our outsourcing experience effortless.",
+      "image": "/images/portfolio/hiveLogo.png"
+    }
+  ],
+  "contact": {
+    "headerText": "Get in touch.",
+    "description": "Let's Connect and Create Something Amazing Together! Drop me a message below, and let's turn your ideas into reality. I'm here to make the process smooth and enjoyable. Looking forward to hearing from you!",
+    "items": [
+      {
+        "type": "Location",
+        "text": "Prishtinë, Kosova",
+        "href": "https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z"
+      },
+      {
+        "type": "Instagram",
+        "text": "@artonramadani1",
+        "href": "https://www.instagram.com/artonramadani1/"
+      },
+      {
+        "type": "Github",
+        "text": "ArtonRamadani",
+        "href": "https://github.com/ArtonRamadani"
+      }
+    ]
+  },
+  "socialLinks": [
+    {
+      "label": "LinkedIn",
+      "icon": "LinkedInIcon",
+      "href": "https://www.linkedin.com/in/arton-ramadani-08790a172/"
+    },
+    {
+      "label": "Github",
+      "icon": "GithubIcon",
+      "href": "https://github.com/ArtonRamadani"
+    },
+    {
+      "label": "Instagram",
+      "icon": "InstagramIcon",
+      "href": "https://www.instagram.com/artonramadani1/"
+    }
+  ],
+  "education": [
+    {
+      "date": "December 2023",
+      "location": "University for Business and Technology",
+      "title": "Bachelor in Computer Science and Technology",
+      "content": "<div class=\"grid grid-cols-1 gap-y-4 py-8 first:pt-0 last:pb-0 md:grid-cols-4\">\n<div class=\"col-span-1 flex flex-col md:col-span-3\">\n<div class=\"flex flex-col pb-8 text-center last:pb-0 md:text-left\">\n<p>Computer science is a dynamic and rapidly growing area that has become an integral part of the world that we live in today. Having a degree in this field will provide you with a deep understanding of theories and emerging technologies. This knowledge and experience allowed me to develop cutting-edge solutions that address today&rsquo;s challenges. During my studies, I have gained the necessary knowledge to become a successful Developer and Engineer in order to succeed in today's market need. I am forever grateful to the Professors and my Family for supporting me along this journey!</p>\n</div>\n</div>\n</div>"
+    }
+  ],
+  "training": [
+    {
+      "date": "September 2021",
+      "location": "American University of Kosova (AUK)",
+      "title": "Cybersecurity",
+      "content": "<p>Certified by the American university of Kosova (AUK) for successfully finishing the CISCO Trainings: Introduction to Cybersecurity &ndash; 29 October 2021. Cybersecurity Essentials &ndash; February 2022</p>"
+    },
+    {
+      "date": "October 2018 - December 2019",
+      "location": "American University of Kosova (AUK)",
+      "title": "Youth Career IT Pathway",
+      "content": "<div class=\"flex flex-col pb-8 text-center last:pb-0 md:text-left\">\n<p>During YCIP Training, I developed both technical and soft skills through hands-on HTML, CSS, JavaScript, and WordPress training. This experience strengthened my passion for coding and problem-solving. I also earned certificates and recognition for my dedication and achievements. I am grateful to the teachers and mentors who inspired and empowered me to pursue my dream in technology!</p>\n</div>"
+    },
+    {
+      "date": "September 2017",
+      "location": "American School of Kosova (ASK)",
+      "title": "College Prep. Club",
+      "content": ""
+    },
+    {
+      "date": "September 2017",
+      "location": "Konrad-Adenaure-Stifung",
+      "title": "The role of youth in modern campaigning",
+      "content": ""
+    }
+  ],
+  "experience": [
+    {
+      "date": "November 2025 - Present",
+      "location": "Genpact",
+      "title": "Software Engineer",
+      "content": "Work across application development, backend engineering, data handling, workflow-driven solutions, and analytics-oriented processes within enterprise environments."
+    },
+    {
+      "date": "February 2022 - November 2025",
+      "location": "Harrisia",
+      "title": "Software Engineer",
+      "content": "<p>I began this role as a pure Software Engineer, but eventually ranked up additional responsibilities including leading development teams (open source &amp; mobile teams), managing projects, overseeing DevOps, environment stages, security, and GitLab server management. My role involved writing technical proposals, organizing client meetings, ensuring code quality, and optimizing workflows to meet deadlines efficiently. My commitment to delivering and fostering high-quality, scalable solutions while maintaining efficient team coordination, project execution and most importantly a workplace environment where working with colleagues is enjoyable.</p>\n<p>While my core role is Software Engineer, my responsibilities extend to:</p>\n<p><strong>&bull; Team Leadership</strong>&nbsp;&ndash; Managing and mentoring development teams to ensure project success.</p>\n<p><strong>&bull; Project Management</strong>&nbsp;&ndash; Overseeing project lifecycles, from planning to deployment.</p>\n<p><strong>&bull; DevOps &amp; Security</strong> &ndash; Managing server infrastructure, security protocols, and deployment.</p>"
+    },
+    {
+      "date": "January 2025 - July 2025",
+      "location": "ROI ACADEMY",
+      "title": "MERN STACK LECTURER",
+      "content": "<p>Worked together with ROI Academy to hold an intensive long term training that not only focuses on code and best practices but also sharing real experiences from my end without disregarding the confidentiality of my work nature.<br>In this training I am lecturing about MERN Stack technologies, how everything falls into place together, how to best utilize their skills and gain the most out of this training to stand out in the market. One thing i aimed to proactively achieve with my students, is to engage them into a creative thinking for issues that they will encounter for the first time. The ability to perceive such a mindset is a special skill that everyone can achieve, thus I strongly believe that this is a fundamental skill for a strong and professional engineer as this method has helped me consistently strive in my career.</p>"
+    },
+    {
+      "date": "January 2023 - June 2023",
+      "location": "Harrisia",
+      "title": "FRONT-END AND REACT JS TRAINER",
+      "content": "<div class=\"flex flex-col pb-8 text-center last:pb-0 md:text-left\">\n<p>Led a comprehensive 6-week intensive training program for 30 students that covered front-end technologies such as HTML, CSS, and JavaScript. I worked as Professor Egzon Peci's assistant during this program, supporting and lecturing with the main teacher.<br><br>Led a comprehensive 12-week React JS training course for 30 students. As the React JS lecturer, I covered both the fundamental ideas and the more complex details of React JS. I also covered important topics like the Virtual DOM, the distinctions between class and functional components, the use of hooks, the implementation of React Router, how to handle props effectively, advanced state management with Redux, API integration, styling techniques, testing with Jest Library, the complexities of deploying React applications, and advanced React Topics to open the horizon to the participants as to what they can do using React JS as a developing technology.</p>\n</div>"
+    },
+    {
+      "date": "2017 - 2022",
+      "location": "Remote",
+      "title": "FREELANCER",
+      "content": "<div class=\"flex flex-col pb-8 text-center last:pb-0 md:text-left\">\n<p>Successfully delivered comprehensive freelance projects for multiple clients, centered on developing dynamic web applications. Leveraging React.js for the front end, Node.js for server-side logic, MySQL &amp; MSSQL for database management and also VIMEO as a streaming service. In these projects I aim to optimize and enhance user interaction with the provided services, which also ensures customer satisfaction and a healthy long term partnership with them. I have enlisted most of these projects bellow but please note that due to client requests I have not included all of the projects in accordance with their demands to showcase my work.</p>\n</div>"
+    },
+    {
+      "date": "January 2021 - November 2021",
+      "location": "KAPAKU WEB",
+      "title": "FRONT END DEVELOPER",
+      "content": ""
+    }
+  ]
+}

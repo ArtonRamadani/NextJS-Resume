@@ -7,13 +7,18 @@ import Section from '../Layout/Section';
 
 const About: FC = memo(() => {
   const {profileImageSrc, description, aboutItems} = aboutData;
+  const isStaticImage = typeof profileImageSrc === 'object';
   return (
     <Section className="bg-neutral-800" sectionId={SectionId.About}>
       <div className={classNames('grid grid-cols-1 gap-y-4', {'md:grid-cols-4': !!profileImageSrc})}>
         {!!profileImageSrc && (
           <div className="col-span-1 flex justify-center md:justify-start">
             <div className="relative h-24 w-24 overflow-hidden rounded-xl md:h-96 md:w-44">
-              <Image alt="about-me-image" className="h-full w-full object-cover" src={profileImageSrc} />
+              {isStaticImage ? (
+                <Image alt="about-me-image" className="h-full w-full object-cover" src={profileImageSrc} />
+              ) : (
+                <img alt="about-me-image" className="h-full w-full object-cover" src={profileImageSrc as string} />
+              )}
             </div>
           </div>
         )}

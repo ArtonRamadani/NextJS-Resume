@@ -8,7 +8,7 @@ import Section from '../Layout/Section';
 import Socials from '../Socials';
 
 const Hero: FC = memo(() => {
-  const {imageSrc, name, description, actions} = heroData;
+  const {imageSrc, name, nameColor, description, actions} = heroData;
 
   return (
     <Section noPadding sectionId={SectionId.Hero}>
@@ -20,10 +20,10 @@ const Hero: FC = memo(() => {
           priority
           src={imageSrc}
         />
-        <div className="z-10  max-w-screen-lg px-4 lg:px-0">
-          <div className="flex flex-col items-center gap-y-6 rounded-xl bg-gray-800/40 p-6 text-center shadow-lg backdrop-blur-sm">
-            <h1 className="text-4xl font-bold text-white sm:text-5xl lg:text-7xl">{name}</h1>
-            {description}
+        <div className="z-10  max-w-screen-lg px-4 lg:px-0 ">
+          <div className="flex flex-col items-center gap-y-6 rounded-xl bg-gray-800/40 p-6 text-center text-white shadow-lg backdrop-blur-sm lg:px-12">
+            <h1 className="text-4xl font-bold sm:text-5xl lg:text-7xl" style={{color: nameColor || '#ffffff'}}>{name}</h1>
+            <div style={{color: nameColor || '#ffffff'}}>{description}</div>
             <div className="flex gap-x-4 text-neutral-100">
               <Socials />
             </div>
