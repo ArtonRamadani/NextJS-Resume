@@ -127,8 +127,6 @@ const AdminLogin: FC = memo(() => {
             {loading ? 'Signing in...' : 'Sign In'}
           </button>
         </form>
-
-        <p className="mt-4 text-center text-xs text-gray-500">Default: admin / admin</p>
       </div>
     </div>
   );
