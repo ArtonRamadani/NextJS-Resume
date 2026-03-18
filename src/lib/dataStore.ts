@@ -3,37 +3,68 @@ import path from 'path';
 
 /**
  * On Vercel, the project filesystem is read-only.
- * We copy JSON files from src/data to /tmp on first access,
+ * We copy JSON files from the bundled source to /tmp on first access,
  * then read/write from /tmp. Locally, we use src/data directly.
  */
 
 const IS_VERCEL = !!process.env.VERCEL;
-const SRC_DATA_DIR = path.join(process.cwd(), 'src', 'data');
 const TMP_DATA_DIR = '/tmp/portfolio-data';
 
+// Try multiple possible locations for the source data files
+function findSrcDataDir(): string {
+  const candidates = [
+    path.join(process.cwd(), 'src', 'data'),
+    path.join(process.cwd(), '.next', 'server', 'src', 'data'),
+    path.join(__dirname, '..', '..', 'data'),
+    path.join(__dirname, '..', 'data'),
+    path.join(__dirname, 'data'),
+  ];
+  for (const dir of candidates) {
+    if (fs.existsSync(dir) && fs.existsSync(path.join(dir, 'portfolioData.json'))) {
+      return dir;
+    }
+  }
+  // Fallback
+  return path.join(process.cwd(), 'src', 'data');
+}
+
+let _srcDataDir: string | null = null;
+function getSrcDataDir(): string {
+  if (!_srcDataDir) _srcDataDir = findSrcDataDir();
+  return _srcDataDir;
+}
+
 function ensureTmpDir() {
-  if (IS_VERCEL && !fs.existsSync(TMP_DATA_DIR)) {
+  if (!fs.existsSync(TMP_DATA_DIR)) {
     fs.mkdirSync(TMP_DATA_DIR, {recursive: true});
   }
 }
 
-/**
- * Get the writable path for a data file.
- * On Vercel: copies from src/data to /tmp if not already there, returns /tmp path.
- * Locally: returns the src/data path directly.
- */
 export function getDataPath(filename: string): string {
   if (!IS_VERCEL) {
-    return path.join(SRC_DATA_DIR, filename);
+    return path.join(getSrcDataDir(), filename);
   }
 
   ensureTmpDir();
   const tmpPath = path.join(TMP_DATA_DIR, filename);
-  const srcPath = path.join(SRC_DATA_DIR, filename);
+  const srcPath = path.join(getSrcDataDir(), filename);
 
-  // Copy from source to tmp on first access
-  if (!fs.existsSync(tmpPath) && fs.existsSync(srcPath)) {
-    fs.copyFileSync(srcPath, tmpPath);
+  if (!fs.existsSync(tmpPath)) {
+    if (fs.existsSync(srcPath)) {
+      fs.copyFileSync(srcPath, tmpPath);
+    } else {
+      // Create sensible defaults if source doesn't exist
+      const defaults: Record<string, unknown> = {
+        'sessions.json': {},
+        'authState.json': {failedAttempts: 0, cooldownUntil: null, cooldownCount: 0},
+        'loginLogs.json': [],
+      };
+      if (defaults[filename] !== undefined) {
+        fs.writeFileSync(tmpPath, JSON.stringify(defaults[filename], null, 2), 'utf-8');
+      } else {
+        throw new Error(`Data file not found: ${filename} (searched: ${srcPath})`);
+      }
+    }
   }
 
   return tmpPath;
@@ -49,11 +80,6 @@ export function writeJSON(filename: string, data: unknown) {
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf-8');
 }
 
-/**
- * Get the writable upload directory.
- * On Vercel: /tmp/uploads (note: these won't persist across deploys)
- * Locally: public/uploads
- */
 export function getUploadDir(): string {
   if (IS_VERCEL) {
     const dir = '/tmp/uploads';

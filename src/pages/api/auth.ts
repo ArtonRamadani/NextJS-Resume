@@ -128,7 +128,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     return res.status(405).json({error: 'Method not allowed'});
   } catch (err) {
-    console.error('Auth API error:', err);
-    return res.status(500).json({error: 'Internal server error'});
+    const message = err instanceof Error ? err.message : String(err);
+    console.error('Auth API error:', message, err);
+    return res.status(500).json({error: 'Internal server error', detail: message});
   }
 }

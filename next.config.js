@@ -40,6 +40,11 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   trailingSlash: false,
+  experimental: {
+    outputFileTracingIncludes: {
+      '/api/*': ['./src/data/**/*.json'],
+    },
+  },
   images: {
     domains: [
       'images.unsplash.com',
