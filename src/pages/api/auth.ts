@@ -7,17 +7,12 @@ const DATA_DIR = path.join(process.cwd(), 'src', 'data');
 const CREDENTIALS_FILE = path.join(DATA_DIR, 'adminCredentials.json');
 const AUTH_STATE_FILE = path.join(DATA_DIR, 'authState.json');
 const LOGIN_LOGS_FILE = path.join(DATA_DIR, 'loginLogs.json');
+const SESSIONS_FILE = path.join(DATA_DIR, 'sessions.json');
 
 const BASE_COOLDOWN_MS = 60 * 60 * 1000; // 1 hour
 const EXTRA_COOLDOWN_MS = 15 * 60 * 1000; // 15 minutes per extra attempt
 const MAX_ATTEMPTS = 3;
-
-// Simple token store - use global to persist across hot reloads in dev
-const globalForSessions = globalThis as unknown as {__adminSessions?: Map<string, number>};
-if (!globalForSessions.__adminSessions) {
-  globalForSessions.__adminSessions = new Map();
-}
-const activeSessions = globalForSessions.__adminSessions;
+const SESSION_TTL_MS = 4 * 60 * 60 * 1000; // 4 hours
 
 function hashPassword(password: string): string {
   return crypto.createHash('sha256').update(password).digest('hex');
@@ -37,12 +32,35 @@ function appendLoginLog(entry: {timestamp: string; ip: string; success: boolean;
   writeJSON(LOGIN_LOGS_FILE, logs);
 }
 
+// File-based sessions so they survive serverless cold starts
+function getSessions(): Record<string, number> {
+  try { return readJSON(SESSIONS_FILE); } catch { return {}; }
+}
+
+function saveSession(token: string, expiry: number) {
+  const sessions = getSessions();
+  // Clean expired while we're here
+  const now = Date.now();
+  for (const k of Object.keys(sessions)) {
+    if (sessions[k] < now) delete sessions[k];
+  }
+  sessions[token] = expiry;
+  writeJSON(SESSIONS_FILE, sessions);
+}
+
+function removeSession(token: string) {
+  const sessions = getSessions();
+  delete sessions[token];
+  writeJSON(SESSIONS_FILE, sessions);
+}
+
 export function validateToken(token: string | undefined): boolean {
   if (!token) return false;
-  const expiry = activeSessions.get(token);
+  const sessions = getSessions();
+  const expiry = sessions[token];
   if (!expiry) return false;
   if (Date.now() > expiry) {
-    activeSessions.delete(token);
+    removeSession(token);
     return false;
   }
   return true;
@@ -66,7 +84,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
           cooldownUntil: authState.cooldownUntil,
         });
       }
-      // Cooldown expired, but keep cooldownCount for escalation
       authState.failedAttempts = 0;
       authState.cooldownUntil = null;
     }
@@ -74,14 +91,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const passwordHash = hashPassword(password || '');
 
     if (username === credentials.username && passwordHash === credentials.passwordHash) {
-      // Success - reset auth state
       authState.failedAttempts = 0;
       authState.cooldownUntil = null;
       authState.cooldownCount = 0;
       writeJSON(AUTH_STATE_FILE, authState);
 
       const token = crypto.randomBytes(32).toString('hex');
-      activeSessions.set(token, Date.now() + 4 * 60 * 60 * 1000); // 4 hour session
+      saveSession(token, Date.now() + SESSION_TTL_MS);
 
       appendLoginLog({timestamp: new Date().toISOString(), ip: clientIp, success: true, username});
 
@@ -123,7 +139,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   // DELETE - logout
   if (req.method === 'DELETE') {
     const token = req.headers.authorization?.replace('Bearer ', '');
-    if (token) activeSessions.delete(token);
+    if (token) removeSession(token);
     return res.status(200).json({success: true});
   }
 

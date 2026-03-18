@@ -15,6 +15,23 @@ const nextConfig = {
 
     return config;
   },
+  async headers() {
+    return [
+      {
+        source: '/api/:path*',
+        headers: [
+          {key: 'Referrer-Policy', value: 'same-origin'},
+          {key: 'X-Content-Type-Options', value: 'nosniff'},
+        ],
+      },
+      {
+        source: '/admin/:path*',
+        headers: [
+          {key: 'Referrer-Policy', value: 'same-origin'},
+        ],
+      },
+    ];
+  },
   compress: true,
   generateEtags: true,
   pageExtensions: ['tsx', 'mdx', 'ts'],
