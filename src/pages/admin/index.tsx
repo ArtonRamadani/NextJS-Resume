@@ -14,11 +14,10 @@ import {
   TrashIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline';
+import {Editor} from '@tinymce/tinymce-react';
 import classNames from 'classnames';
 import Link from 'next/link';
 import {FC, memo, useCallback, useEffect, useRef, useState} from 'react';
-
-import {Editor} from '@tinymce/tinymce-react';
 
 import FacebookIcon from '../../components/Icon/FacebookIcon';
 import GithubIcon from '../../components/Icon/GithubIcon';

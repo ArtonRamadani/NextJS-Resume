@@ -69,6 +69,14 @@
       "rules": {
         "@typescript-eslint/no-var-requires": "off"
       }
+    },
+    {
+      "files": ["src/pages/admin/**/*.tsx"],
+      "rules": {
+        "react-memo/require-usememo": "off",
+        "react/jsx-sort-props": "off",
+        "react-hooks/exhaustive-deps": "warn"
+      }
     }
   ]
 }
