@@ -35,7 +35,3 @@ yarn-error.log*
 
 # vercel
 .vercel
-
-# admin auth state (sensitive, resets on deploy)
-src/data/authState.json
-src/data/adminCredentials.json
