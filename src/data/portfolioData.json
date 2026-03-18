@@ -296,7 +296,7 @@
       "date": "December 2023",
       "location": "University for Business and Technology",
       "title": "Bachelor in Computer Science and Technology",
-      "content": "<div class=\"grid grid-cols-1 gap-y-4 py-8 first:pt-0 last:pb-0 md:grid-cols-4\">\n<div class=\"col-span-1 flex flex-col md:col-span-3\">\n<div class=\"flex flex-col pb-8 text-center last:pb-0 md:text-left\">\n<p>Computer science is a dynamic and rapidly growing area that has become an integral part of the world that we live in today. Having a degree in this field will provide you with a deep understanding of theories and emerging technologies. This knowledge and experience allowed me to develop cutting-edge solutions that address today&rsquo;s challenges. During my studies, I have gained the necessary knowledge to become a successful Developer and Engineer in order to succeed in today's market need. I am forever grateful to the Professors and my Family for supporting me along this journey!</p>\n</div>\n</div>\n</div>"
+      "content": "<p>Computer science is a dynamic and rapidly growing area that has become an integral part of the world that we live in today. Having a degree in this field will provide you with a deep understanding of theories and emerging technologies. This knowledge and experience allowed me to develop cutting-edge solutions that address today&rsquo;s challenges. During my studies, I have gained the necessary knowledge to become a successful Developer and Engineer in order to succeed in today's market need. I am forever grateful to the Professors and my Family for supporting me along this journey!</p>"
     }
   ],
   "training": [
@@ -310,7 +310,7 @@
       "date": "October 2018 - December 2019",
       "location": "American University of Kosova (AUK)",
       "title": "Youth Career IT Pathway",
-      "content": "<div class=\"flex flex-col pb-8 text-center last:pb-0 md:text-left\">\n<p>During YCIP Training, I developed both technical and soft skills through hands-on HTML, CSS, JavaScript, and WordPress training. This experience strengthened my passion for coding and problem-solving. I also earned certificates and recognition for my dedication and achievements. I am grateful to the teachers and mentors who inspired and empowered me to pursue my dream in technology!</p>\n</div>"
+      "content": "<p>During YCIP Training, I developed both technical and soft skills through hands-on HTML, CSS, JavaScript, and WordPress training. This experience strengthened my passion for coding and problem-solving. I also earned certificates and recognition for my dedication and achievements. I am grateful to the teachers and mentors who inspired and empowered me to pursue my dream in technology!</p>"
     },
     {
       "date": "September 2017",
@@ -348,13 +348,13 @@
       "date": "January 2023 - June 2023",
       "location": "Harrisia",
       "title": "FRONT-END AND REACT JS TRAINER",
-      "content": "<div class=\"flex flex-col pb-8 text-center last:pb-0 md:text-left\">\n<p>Led a comprehensive 6-week intensive training program for 30 students that covered front-end technologies such as HTML, CSS, and JavaScript. I worked as Professor Egzon Peci's assistant during this program, supporting and lecturing with the main teacher.<br><br>Led a comprehensive 12-week React JS training course for 30 students. As the React JS lecturer, I covered both the fundamental ideas and the more complex details of React JS. I also covered important topics like the Virtual DOM, the distinctions between class and functional components, the use of hooks, the implementation of React Router, how to handle props effectively, advanced state management with Redux, API integration, styling techniques, testing with Jest Library, the complexities of deploying React applications, and advanced React Topics to open the horizon to the participants as to what they can do using React JS as a developing technology.</p>\n</div>"
+      "content": "<p>Led a comprehensive 6-week intensive training program for 30 students that covered front-end technologies such as HTML, CSS, and JavaScript. I worked as Professor Egzon Peci's assistant during this program, supporting and lecturing with the main teacher.<br><br>Led a comprehensive 12-week React JS training course for 30 students. As the React JS lecturer, I covered both the fundamental ideas and the more complex details of React JS. I also covered important topics like the Virtual DOM, the distinctions between class and functional components, the use of hooks, the implementation of React Router, how to handle props effectively, advanced state management with Redux, API integration, styling techniques, testing with Jest Library, the complexities of deploying React applications, and advanced React Topics to open the horizon to the participants as to what they can do using React JS as a developing technology.</p>"
     },
     {
       "date": "2017 - 2022",
       "location": "Remote",
       "title": "FREELANCER",
-      "content": "<div class=\"flex flex-col pb-8 text-center last:pb-0 md:text-left\">\n<p>Successfully delivered comprehensive freelance projects for multiple clients, centered on developing dynamic web applications. Leveraging React.js for the front end, Node.js for server-side logic, MySQL &amp; MSSQL for database management and also VIMEO as a streaming service. In these projects I aim to optimize and enhance user interaction with the provided services, which also ensures customer satisfaction and a healthy long term partnership with them. I have enlisted most of these projects bellow but please note that due to client requests I have not included all of the projects in accordance with their demands to showcase my work.</p>\n</div>"
+      "content": "<p>Successfully delivered comprehensive freelance projects for multiple clients, centered on developing dynamic web applications. Leveraging React.js for the front end, Node.js for server-side logic, MySQL &amp; MSSQL for database management and also VIMEO as a streaming service. In these projects I aim to optimize and enhance user interaction with the provided services, which also ensures customer satisfaction and a healthy long term partnership with them. I have enlisted most of these projects bellow but please note that due to client requests I have not included all of the projects in accordance with their demands to showcase my work.</p>"
     },
     {
       "date": "January 2021 - November 2021",
