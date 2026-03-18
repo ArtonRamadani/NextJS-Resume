@@ -36,7 +36,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const uploadDir = getUploadDir();
     const base64Data = fileData.replace(/^data:[^;]+;base64,/, '');
     const buffer = Buffer.from(base64Data, 'base64');
-    fs.writeFileSync(path.join(uploadDir, finalName), buffer);
+    fs.writeFileSync(path.join(uploadDir, finalName), new Uint8Array(buffer));
 
     return res.status(200).json({url: `/uploads/${finalName}`});
   } catch (err) {
